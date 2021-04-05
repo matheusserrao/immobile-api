@@ -1,5 +1,5 @@
 build:
   docker:
-    immobile-api: Dockerfile
+    web: Dockerfile
 run:
-  immobile-api: npm run start:prod
+  web: npm run start:prod
