@@ -1,6 +1,4 @@
 build:
     docker:
       immobile-api: Dockerfile
-  run:
-    immobile-api: npm run start:prod
   
