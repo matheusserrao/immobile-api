@@ -23,12 +23,19 @@ export class ValueService implements OnModuleInit {
     const { value, createdAt } = await this.squareMeterService.getCurrentValueSquareMeter();
 
     const resultSquareMeter = new ResultValueSquareMeterDTO();
+    const totalValue = this.formatValue(meter * value);
+    const valuePerMeterFormatted = this.formatValue(value);
+
     resultSquareMeter.meter = meter;
     resultSquareMeter.dateOfValuePerMeter = createdAt;
-    resultSquareMeter.totalValue = meter * value;
-    resultSquareMeter.valuePerMeter = value;
+    resultSquareMeter.totalValue = totalValue;
+    resultSquareMeter.valuePerMeter = valuePerMeterFormatted;
 
     return resultSquareMeter;
+  }
+
+  formatValue(totalValue: number){
+    return totalValue.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
   }
 
   isMeterValid(meter: number) {
