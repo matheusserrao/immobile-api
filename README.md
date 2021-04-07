@@ -21,7 +21,7 @@
 
 ## Swagger API docs
 
-This  repo uses the NestJS swagger module for API documentation. NestJS Swagger - https://app-square-meter-api.herokuapp.com/square-meter/api/#/
+This  repo uses the NestJS swagger module for API documentation. NestJS Swagger - https://app-immobile-api.herokuapp.com/immobile/api/
 
 ## Running with Docker and Docker Compose
 ```bash
